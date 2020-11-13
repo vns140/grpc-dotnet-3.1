@@ -1,0 +1,5 @@
+obj/Debug/netcoreapp3.1/Greet.cs \
+obj/Debug/netcoreapp3.1/GreetGrpc.cs: google/api/http.proto\
+ /Users/vinicius/.nuget/packages/grpc.tools/2.27.0/build/native/include/google/protobuf/descriptor.proto\
+ google/api/annotations.proto\
+ Protos/greet.proto

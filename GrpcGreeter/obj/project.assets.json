@@ -2,7 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Google.Protobuf/3.11.2": {
+      "Google.Api.CommonProtos/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.11.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Api.CommonProtos.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.CommonProtos.dll": {}
+        }
+      },
+      "Google.Protobuf/3.12.2": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2"
@@ -28,11 +40,11 @@
           "lib/netcoreapp3.0/_._": {}
         }
       },
-      "Grpc.AspNetCore.Server/2.27.0": {
+      "Grpc.AspNetCore.Server/2.29.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "2.27.0",
-          "Grpc.Net.Common": "2.27.0"
+          "Grpc.Core.Api": "2.29.0",
+          "Grpc.Net.Common": "2.29.0"
         },
         "compile": {
           "lib/netcoreapp3.0/Grpc.AspNetCore.Server.dll": {}
@@ -61,7 +73,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Grpc.Core.Api/2.27.0": {
+      "Grpc.Core.Api/2.29.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -102,10 +114,10 @@
           "lib/netstandard2.1/Grpc.Net.ClientFactory.dll": {}
         }
       },
-      "Grpc.Net.Common/2.27.0": {
+      "Grpc.Net.Common/2.29.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "2.27.0"
+          "Grpc.Core.Api": "2.29.0"
         },
         "compile": {
           "lib/netstandard2.1/Grpc.Net.Common.dll": {}
@@ -120,6 +132,23 @@
           "build/Grpc.Tools.props": {},
           "build/Grpc.Tools.targets": {}
         }
+      },
+      "Microsoft.AspNetCore.Grpc.HttpApi/0.1.0-alpha.20305.2": {
+        "type": "package",
+        "dependencies": {
+          "Google.Api.CommonProtos": "2.0.0",
+          "Google.Protobuf": "3.12.2",
+          "Grpc.AspNetCore.Server": "2.29.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Grpc.HttpApi.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Grpc.HttpApi.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Microsoft.Extensions.Configuration/2.1.1": {
         "type": "package",
@@ -260,14 +289,33 @@
     }
   },
   "libraries": {
-    "Google.Protobuf/3.11.2": {
-      "sha512": "bebdVFzZcwlKN9FcnrdjGfxYKSmn3UbdLR+P30lr/bQVjguiQmnKYuOC2E/7DQRvSNRDQ/QMFBIohSif+0pSpA==",
+    "Google.Api.CommonProtos/2.0.0": {
+      "sha512": "GE3RbDXpPrzaVk1ubaD8b1EpvEYz/MPBUzg0poUcMJa1EKLkkblK5X6ysg6dlXfiNCE/W6VJ13ABtB89UQ2A8g==",
       "type": "package",
-      "path": "google.protobuf/3.11.2",
+      "path": "google.api.commonprotos/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.11.2.nupkg.sha512",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.api.commonprotos.2.0.0.nupkg.sha512",
+        "google.api.commonprotos.nuspec",
+        "lib/net461/Google.Api.CommonProtos.dll",
+        "lib/net461/Google.Api.CommonProtos.pdb",
+        "lib/net461/Google.Api.CommonProtos.xml",
+        "lib/netstandard2.0/Google.Api.CommonProtos.dll",
+        "lib/netstandard2.0/Google.Api.CommonProtos.pdb",
+        "lib/netstandard2.0/Google.Api.CommonProtos.xml"
+      ]
+    },
+    "Google.Protobuf/3.12.2": {
+      "sha512": "8JZLQ9UGwBltiGF6EfFaHa2NG1IlNzadyi4d+9rCjGa8/M+beummP4BRY1vFl1i4Wm8kicEC22Shm8ecQmjaYQ==",
+      "type": "package",
+      "path": "google.protobuf/3.12.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.protobuf.3.12.2.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -293,14 +341,14 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.AspNetCore.Server/2.27.0": {
-      "sha512": "2z5MItXo9IxT+kikB82zVpzmwUF/cDjWq0oJHgnhql9JAu62LpY+gb8u1LR1X+YWPc+EznFsPWS1GBSUAZ7bGg==",
+    "Grpc.AspNetCore.Server/2.29.0": {
+      "sha512": "MlhHV02tqml7VoJJ631csbXOfFr++uKdEaGOGiXB0Pc8OyViYdkIMJHPogrn7q+UlATGolSCC+YoiicoLPi5bA==",
       "type": "package",
-      "path": "grpc.aspnetcore.server/2.27.0",
+      "path": "grpc.aspnetcore.server/2.29.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.aspnetcore.server.2.27.0.nupkg.sha512",
+        "grpc.aspnetcore.server.2.29.0.nupkg.sha512",
         "grpc.aspnetcore.server.nuspec",
         "lib/netcoreapp3.0/Grpc.AspNetCore.Server.dll",
         "lib/netcoreapp3.0/Grpc.AspNetCore.Server.pdb",
@@ -323,14 +371,14 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Core.Api/2.27.0": {
-      "sha512": "UAHXfV+n6TEMCybML7V+1qWP7G9byGXUE2mtATWpctP7xB8P5J++iYMuyxrprKkC36X/QuUwHJmHpBxlDHzF2g==",
+    "Grpc.Core.Api/2.29.0": {
+      "sha512": "0jBIZo2f6KkCPD0vxD8rs4tASTp0lwPcyE8BfxQ/dx39eQ4qAPD/eB7JZNlG9rXrzrYBuU4Etdr4eysYVddqYA==",
       "type": "package",
-      "path": "grpc.core.api/2.27.0",
+      "path": "grpc.core.api/2.29.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.core.api.2.27.0.nupkg.sha512",
+        "grpc.core.api.2.29.0.nupkg.sha512",
         "grpc.core.api.nuspec",
         "lib/net45/Grpc.Core.Api.dll",
         "lib/net45/Grpc.Core.Api.pdb",
@@ -373,14 +421,14 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.Common/2.27.0": {
-      "sha512": "qMd5Yf6PsN+TxGmz/wPB1dbih7HHgTkWhIZ2wYQX52znbWG2uBaZsBcyQgda1nNaMrXJzevbGb9eFKnvqmOBkw==",
+    "Grpc.Net.Common/2.29.0": {
+      "sha512": "7Jxd1HFG2fzK2Q8Kf33/G79weBFto4pBerYU+NWV93cUr5W6WI1cne/9D3t9fFs0fgaboX8pUzVvfoGL39GVqw==",
       "type": "package",
-      "path": "grpc.net.common/2.27.0",
+      "path": "grpc.net.common/2.29.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.net.common.2.27.0.nupkg.sha512",
+        "grpc.net.common.2.29.0.nupkg.sha512",
         "grpc.net.common.nuspec",
         "lib/netstandard2.1/Grpc.Net.Common.dll",
         "lib/netstandard2.1/Grpc.Net.Common.pdb",
@@ -432,6 +480,21 @@
         "tools/windows_x64/protoc.exe",
         "tools/windows_x86/grpc_csharp_plugin.exe",
         "tools/windows_x86/protoc.exe"
+      ]
+    },
+    "Microsoft.AspNetCore.Grpc.HttpApi/0.1.0-alpha.20305.2": {
+      "sha512": "v9ND+ikbt1KKHjRlaHHKTSm47qc0N0evEyMUbvJX+Buq1QjqdGrtVFPpJMUyX1Rsg6O9BYxnYFQ8WhCwVIWlOw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.grpc.httpapi/0.1.0-alpha.20305.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Grpc.HttpApi.dll",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Grpc.HttpApi.pdb",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Grpc.HttpApi.xml",
+        "microsoft.aspnetcore.grpc.httpapi.0.1.0-alpha.20305.2.nupkg.sha512",
+        "microsoft.aspnetcore.grpc.httpapi.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/2.1.1": {
@@ -625,23 +688,24 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Grpc.AspNetCore >= 2.27.0"
+      "Grpc.AspNetCore >= 2.27.0",
+      "Microsoft.AspNetCore.Grpc.HttpApi >= 0.1.0-alpha.20305.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hpspe\\.nuget\\packages\\": {}
+    "/Users/vinicius/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hpspe\\OneDrive\\Documentos\\PegueJa\\Estudos\\grpc-dotnet-3.1\\GrpcGreeter\\GrpcGreeter.csproj",
+      "projectUniqueName": "/Users/vinicius/Documents/Projetos/Laboratorios/grpc-dotnet-3.1/GrpcGreeter/GrpcGreeter.csproj",
       "projectName": "GrpcGreeter",
-      "projectPath": "C:\\Users\\hpspe\\OneDrive\\Documentos\\PegueJa\\Estudos\\grpc-dotnet-3.1\\GrpcGreeter\\GrpcGreeter.csproj",
-      "packagesPath": "C:\\Users\\hpspe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hpspe\\OneDrive\\Documentos\\PegueJa\\Estudos\\grpc-dotnet-3.1\\GrpcGreeter\\obj\\",
+      "projectPath": "/Users/vinicius/Documents/Projetos/Laboratorios/grpc-dotnet-3.1/GrpcGreeter/GrpcGreeter.csproj",
+      "packagesPath": "/Users/vinicius/.nuget/packages/",
+      "outputPath": "/Users/vinicius/Documents/Projetos/Laboratorios/grpc-dotnet-3.1/GrpcGreeter/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hpspe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/vinicius/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -666,6 +730,10 @@
           "Grpc.AspNetCore": {
             "target": "Package",
             "version": "[2.27.0, )"
+          },
+          "Microsoft.AspNetCore.Grpc.HttpApi": {
+            "target": "Package",
+            "version": "[0.1.0-alpha.20305.2, )"
           }
         },
         "imports": [
@@ -686,7 +754,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
       }
     }
   }
